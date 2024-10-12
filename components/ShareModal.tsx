@@ -20,6 +20,7 @@ import Collaborator from "@/components/Collaborator";
 import { updateDocumentAccess } from "@/lib/actions/room.actions";
 
 const ShareModal = ({ roomId, collaborators, creatorId, currentUserType }: ShareDocumentDialogProps) => {
+
   const user = useSelf();
 
   const [open, setOpen] = useState(false);
@@ -29,6 +30,9 @@ const ShareModal = ({ roomId, collaborators, creatorId, currentUserType }: Share
   const [userType, setUserType] = useState<UserType>('viewer');
 
   const shareDocumentHandler = async () => {
+    // Guard against non-editors calling this action
+    if (currentUserType !== 'editor') return;
+
     setLoading(true);
 
     await updateDocumentAccess({
@@ -74,29 +78,37 @@ const ShareModal = ({ roomId, collaborators, creatorId, currentUserType }: Share
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="share-input"
+              disabled={currentUserType !== 'editor'}  // Disable if not editor
             />
             <UserTypeSelector
               userType={userType}
               setUserType={setUserType}
+              disabled={currentUserType !== 'editor'}  // Disable if not editor
             />
           </div>
-          <Button type="submit" onClick={shareDocumentHandler} className="gradient-blue flex h-full gap-1 px-5" disabled={loading}>
+          <Button
+            type="submit"
+            onClick={shareDocumentHandler}
+            className="gradient-blue flex h-full gap-1 px-5"
+            disabled={loading || currentUserType !== 'editor'} // Disable if loading or not editor
+          >
             {loading ? 'Sending...' : 'Invite'}
           </Button>
         </div>
-        {/* console.log(collaborators); */}
         <div className="my-2 space-y-2">
           <ul className="flex flex-col">
-            {collaborators.map((collaborator) => (
-              <Collaborator
-                key={collaborator.id}
-                roomId={roomId}
-                creatorId={creatorId}
-                email={collaborator.email}
-                collaborator={collaborator}
-                user={user.info}
-              />
-            ))}
+            {collaborators.map((collaborator) => {
+              return (
+                <Collaborator
+                  key={collaborator.id}
+                  roomId={roomId}
+                  creatorId={creatorId}
+                  email={collaborator.email}
+                  collaborator={collaborator}
+                  user={user.info}
+                />
+              );
+            })}
           </ul>
         </div>
       </DialogContent>

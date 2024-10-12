@@ -13,6 +13,7 @@ import Loader from './Loader';
 import ShareModal from './ShareModal';
 
 const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: CollaborativeRoomProps) => {
+  // console.log("Collaborator",users);
   const [documentTitle, setDocumentTitle] = useState(roomMetadata.title);
   const [editing, setEditing] = useState(false);
   const [loading, setLoading] = useState(false);

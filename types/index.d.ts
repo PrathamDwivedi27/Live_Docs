@@ -41,6 +41,7 @@ declare type SearchParamProps = {
     userType: string;
     setUserType: React.Dispatch<React.SetStateAction<UserType>>;
     onClickHandler?: (value: string) => void;
+    disabled?: boolean; // Add the disabled property
   };
   
   declare type ShareDocumentDialogProps = {
