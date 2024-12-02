@@ -29,10 +29,10 @@ Once your document is ready, share it with others. You can control who has acces
 #### **5. Add Images and Media**
 Enhance your document with the ability to post images, tables, and other media. This makes your documents more engaging and visually appealing.
 
-#### **6. Real-Time Commenting**
-Leave flying comments for specific sections of your document, providing feedback or suggestions. Comments can be seen and replied to in real-time by collaborators.
+#### **6. Flying Comments for Instant Feedback**
+Enhance collaboration with Flying Comments, allowing users to leave targeted comments on specific sections of the document in real time. These comments appear dynamically, ensuring your feedback is visible immediately to collaborators. You can reply, resolve, or delete comments seamlessly, making teamwork more interactive and productive.
 
-![Comment](./images/Screenshot%202024-12-02%20210230.png)
+![Comment](./images/Screenshot%202024-12-02%20210203.png)
 
 #### **7. Real-Time Error Monitoring with Sentry**
 With **Sentry** integrated into **Live Docs**, any errors or issues within the app are tracked in real-time. This allows for immediate awareness and resolution of any bugs, ensuring the app’s stability and reliability. You’ll be notified of errors and exceptions, so developers can quickly pinpoint and fix issues, enhancing the user experience.
