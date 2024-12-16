@@ -4,6 +4,14 @@
 
 Additionally, **Sentry** is integrated to provide live error tracking, allowing us to quickly identify, monitor, and resolve any issues in real-time, ensuring an optimal user experience.
 
+**Get Started Now!**  
+Visit [LiveDocs](https://livedocs-chi.vercel.app/) and start creating personalized stories for kids today.
+
+## Project Demo
+
+[![StayEase Demo](https://img.youtube.com/vi/EDQ50Q9EWgo/maxresdefault.jpg)](https://www.youtube.com/watch?v=EDQ50Q9EWgo)
+
+
 ## Features
 
 #### **1. Authentication with Clerk**
@@ -70,7 +78,5 @@ With **Sentry** integrated into **Live Docs**, any errors or issues within the a
 
 Enjoy seamless real-time collaboration with **Live Docs**, the easiest way to create, edit, and share documents with your team! Thanks to **Sentry**, any issues that arise will be quickly tracked and resolved, ensuring your experience is uninterrupted.
 
-**Get Started Now!**  
-Visit [LiveDocs](https://livedocs-chi.vercel.app/) and start creating personalized stories for kids today.
 
 ---
