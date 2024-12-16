@@ -9,7 +9,7 @@ Visit [LiveDocs](https://livedocs-chi.vercel.app/) and start creating personaliz
 
 ## Project Demo
 
-[![StayEase Demo](https://img.youtube.com/vi/EDQ50Q9EWgo/maxresdefault.jpg)](https://www.youtube.com/watch?v=EDQ50Q9EWgo)
+[![StayEase Demo](/images/Screenshot%202024-12-02%20210230.png)](https://www.youtube.com/watch?v=EDQ50Q9EWgo)
 
 
 ## Features
